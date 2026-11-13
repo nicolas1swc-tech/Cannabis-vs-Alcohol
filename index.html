@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alcohol vs. Cannabis</title>
+<meta name="description" content="What the peer-reviewed research says about the health effects of alcohol and cannabis, short and long term, at different ages.">
+<meta property="og:title" content="Alcohol vs. Cannabis">
+<meta property="og:description" content="What the peer-reviewed research says about the health effects of alcohol and cannabis, short and long term, at different ages.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* A single book measure, set in one serif; small sans capitals for structure; one accent, used only for the verdicts. */
+:root {
+  --paper: #FAFAF8;
+  --ink: #1C1C1A;
+  --muted: #6E6D67;
+  --rule: #DAD9D3;
+  --accent: #C4470F;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --measure: 34rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #151514; --ink: #E7E5DF; --muted: #9B9990; --rule: #33322E; --accent: #EE7B42; color-scheme: dark; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.58;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+@media (max-width: 480px) { body { font-size: 17.5px; } }
+
+.page { max-width: var(--measure); margin: 0 auto; padding-block: 5.5rem 4rem; }
+
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--ink); }
+a:focus-visible { outline: 1px solid var(--ink); outline-offset: 2px; }
+
+sup { line-height: 0; font-size: 0.62em; font-family: var(--sans); font-feature-settings: "tnum"; }
+sup a { text-decoration: none; color: var(--muted); padding-left: 1px; }
+sup a:hover { color: var(--ink); }
+
+.caps {
+  font-family: var(--sans); font-weight: 500; font-size: 0.68rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Title page */
+.title { margin-bottom: 5rem; }
+.title .caps { margin: 0 0 2.2rem; }
+h1 {
+  font-weight: 400; font-size: clamp(2.7rem, 9vw, 3.9rem); line-height: 1.02;
+  letter-spacing: -0.015em; margin: 0 0 1.6rem; text-wrap: balance;
+}
+h1 em { font-style: italic; color: var(--muted); }
+.dek { font-style: italic; font-size: 1.18rem; line-height: 1.5; color: var(--ink); margin: 0 0 2.2rem; text-wrap: pretty; }
+.colophon { display: flex; flex-wrap: wrap; gap: 0.3rem 1.6rem; margin: 0; }
+
+/* Parts */
+section { margin-top: 4.2rem; }
+section > .caps { margin: 0 0 0.9rem; }
+h2 { font-weight: 400; font-size: 1.7rem; line-height: 1.2; letter-spacing: -0.005em; margin: 0 0 1.4rem; text-wrap: balance; }
+h3 { font-family: var(--sans); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 2.2rem 0 0.7rem; }
+
+p { margin: 0; text-wrap: pretty; hyphens: auto; }
+p + p { text-indent: 1.4em; }
+.lead { font-size: 1.15rem; line-height: 1.52; }
+
+ul { list-style: none; margin: 0.9rem 0 0; padding: 0; }
+li { position: relative; padding-left: 1.4em; margin-bottom: 0.55rem; }
+li::before { content: "\2013"; position: absolute; left: 0; color: var(--muted); }
+p + ul, ul + p { margin-top: 0.9rem; }
+ul + p { text-indent: 0; }
+
+.aside {
+  font-size: 0.9rem; line-height: 1.5; color: var(--muted); font-style: italic;
+  margin-top: 1rem; text-indent: 0;
+}
+
+.verdict {
+  margin-top: 1.1rem; text-indent: 0;
+  border-top: 1px solid var(--rule); padding-top: 0.8rem;
+}
+.verdict .caps { color: var(--accent); margin-right: 0.6em; }
+
+.break { text-align: center; color: var(--muted); letter-spacing: 0.8em; margin: 4rem 0 0; font-size: 0.9rem; }
+
+/* Table */
+.table-wrap { overflow-x: auto; margin-top: 0.4rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.86rem; line-height: 1.4; min-width: 30rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.6rem 0.9rem 0.6rem 0; border-bottom: 1px solid var(--rule); }
+thead th { font-family: var(--sans); font-weight: 500; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--ink); }
+td:first-child { font-style: italic; }
+td:last-child { padding-right: 0; white-space: nowrap; }
+td.w { color: var(--accent); }
+
+/* Notes */
+.notes { list-style: none; padding: 0; margin: 0; font-size: 0.84rem; line-height: 1.5; counter-reset: n; }
+.notes li { padding-left: 2em; margin-bottom: 0.85rem; }
+.notes li::before { counter-increment: n; content: counter(n) "."; font-family: var(--sans); font-size: 0.78rem; color: var(--muted); font-feature-settings: "tnum"; }
+.notes li:target { background: linear-gradient(var(--rule), var(--rule)) left / 2px 100% no-repeat; }
+.notes .j { font-style: italic; }
+.notes .links { font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 0.4em; }
+.notes .links a { color: var(--muted); margin-right: 0.8em; }
+
+footer { margin-top: 4.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-size: 0.84rem; line-height: 1.5; color: var(--muted); }
+footer p + p { text-indent: 0; margin-top: 0.6rem; }
+</style>
+</head>
+<body>
+<article class="page">
+
+  <header class="title">
+    <p class="caps">A review of the health research</p>
+    <h1>Alcohol <em>vs.</em> Cannabis</h1>
+    <p class="dek">Which is worse for your health? What large peer-reviewed studies show about short- and long-term effects, and how the answer changes for young adults, the middle-aged, and the old.</p>
+    <p class="colophon caps"><span>November 2026</span><span>Fifteen sources</span><span>Ten minutes</span></p>
+  </header>
+
+  <section>
+    <p class="caps">I</p>
+    <h2>In brief</h2>
+    <p class="lead">For physical health, alcohol is worse at nearly every age. It is more toxic to organs, causes cancer, and kills far more people.</p>
+    <p>Cannabis is not harmless. It comes closest to alcohol, and is worse in some respects, in two places: mental health in young adults, and acute problems in older adults. For either drug, the largest single factor is frequency. Most serious harm appears with daily use.</p>
+  </section>
+
+  <section>
+    <p class="caps">II</p>
+    <h2>Reading the evidence</h2>
+    <p>Almost all of this research is observational. No one randomly assigns people to drink or use cannabis for twenty years, so most findings are statistical associations adjusted for other factors, not proven causes. Three problems recur.</p>
+    <ul>
+      <li><em>Sick quitters.</em> People who stop drinking because they are already ill get counted as non-drinkers. For decades this made moderate drinking look healthier than it is.</li>
+      <li><em>Mixed use.</em> Heavy cannabis users often also drink and smoke tobacco, which makes the effects of cannabis alone hard to separate.</li>
+      <li><em>Stronger products.</em> Much of the older, reassuring cannabis research studied far weaker products than those sold today.</li>
+    </ul>
+    <p>Alcohol has been studied for over a century. Cannabis research was restricted for decades, so more questions remain open, especially about long-term use of modern high-THC products.</p>
+  </section>
+
+  <section>
+    <p class="caps">III</p>
+    <h2>Short-term effects</h2>
+    <p>Alcohol is more dangerous in the moment because it can kill outright and drives injuries. The acute harms of cannabis are rarely fatal, but they are more common than its reputation suggests.</p>
+
+    <h3>Alcohol</h3>
+    <ul>
+      <li>Fatal overdose is possible. Alcohol poisoning suppresses breathing and the gag reflex, most often after binge drinking.</li>
+      <li>Injuries dominate, especially when young. Crashes, suicides, and homicides make up most of the harm alcohol does before age forty.<sup><a href="#n1">1</a></sup></li>
+      <li>Blackouts, vomiting with a risk of choking, and heart-rhythm problems after binges.</li>
+    </ul>
+
+    <h3>Cannabis</h3>
+    <ul>
+      <li>No established fatal overdose in healthy adults.</li>
+      <li>Racing heart, panic, paranoia, and sometimes brief psychotic episodes, more likely with high-THC products and edibles.</li>
+      <li>Cannabinoid hyperemesis syndrome: cycles of severe vomiting in frequent users. In Massachusetts, cases per 10,000 emergency visits rose from 0.7 to 10.6 between 2012 and 2021.<sup><a href="#n11">11</a></sup> National data show the steepest recent rise among people aged 15 to 24, sometimes within the first year of use.<sup><a href="#n10">10</a></sup></li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="caps">IV</p>
+    <h2>Long-term effects</h2>
+
+    <h3>Brain and mental health</h3>
+    <p>Cannabis carries a more specific risk of psychosis. Alcohol does more structural damage to the brain over a lifetime.</p>
+    <ul>
+      <li>Daily use of high-potency cannabis was associated with roughly five times the odds of a psychotic disorder.<sup><a href="#n4">4</a></sup> In records covering 6.9 million Danes, the link was strongest in young men: a risk ratio of 3.84 for men aged 16 to 20, against 1.81 for women.<sup><a href="#n3">3</a></sup> The authors estimated that up to 30 percent of schizophrenia cases in men aged 21 to 30 might have been prevented.</li>
+      <li>Heavy, persistent cannabis use beginning in adolescence was linked to a decline in IQ in the Dunedin cohort.<sup><a href="#n5">5</a></sup> Later twin studies suggest family factors explain part of this. In adults who start later and use less, the effects look smaller and largely reversible.</li>
+      <li>Even one to two drinks a day was associated with lower brain volume in UK Biobank scans.<sup><a href="#n6">6</a></sup> Alcohol use disorder is among the strongest modifiable risk factors for early-onset dementia.<sup><a href="#n7">7</a></sup></li>
+    </ul>
+    <p class="aside">The schizophrenia estimates assume cause and effect. Some researchers argue that part of the link reflects shared risk factors, or cannabis-induced psychosis misdiagnosed as schizophrenia.</p>
+    <p class="verdict"><span class="caps">Verdict</span>A close contest, decided by age and potency.</p>
+
+    <h3>Heart and blood vessels</h3>
+    <ul>
+      <li>Among 434,104 American adults, daily cannabis use was associated with 25 percent higher odds of heart attack and 42 percent higher odds of stroke, including among people who had never smoked tobacco.<sup><a href="#n2">2</a></sup> The data were self-reported, so they show association rather than cause.</li>
+      <li>Heavy drinking causes high blood pressure, damage to the heart muscle, and atrial fibrillation. The belief that moderate drinking protects the heart is disputed; a meta-analysis correcting for sick-quitter bias found no survival benefit from low-volume drinking.<sup><a href="#n8">8</a></sup></li>
+    </ul>
+    <p class="verdict"><span class="caps">Verdict</span>Roughly even, depending on dose.</p>
+
+    <h3>Cancer</h3>
+    <ul>
+      <li>Alcohol is the third leading preventable cause of cancer in the United States, after tobacco and obesity. It causes at least seven cancers: breast, colorectal, esophagus, liver, mouth, throat, and voice box. For some, risk may begin to rise at about one drink a day.<sup><a href="#n9">9</a></sup></li>
+      <li>Cannabis smoke contains carcinogens, but large studies have not shown a clear link to lung cancer comparable to tobacco's.</li>
+    </ul>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol.</p>
+
+    <h3>Liver, gut, and lungs</h3>
+    <ul>
+      <li>Alcohol causes fatty liver, hepatitis, cirrhosis, pancreatitis, and gastritis.</li>
+      <li>Cannabis has no comparable organ toxicity. Smoking it causes chronic cough and bronchitis; hyperemesis is its main effect on the gut.</li>
+    </ul>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol.</p>
+
+    <h3>Dependence and withdrawal</h3>
+    <ul>
+      <li>Both are addictive. Cannabis dependence is common among daily users but usually less damaging to the body.</li>
+      <li>Withdrawal from alcohol can be fatal, through seizures or delirium tremens. Withdrawal from cannabis is unpleasant but not medically dangerous.</li>
+    </ul>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol.</p>
+  </section>
+
+  <section>
+    <p class="caps">V</p>
+    <h2>By age</h2>
+
+    <h3>Eighteen to twenty-five</h3>
+    <p>This is where the two come closest. Alcohol offers no health benefit at any amount before forty, in every region studied; for men aged 15 to 39, risk began rising at just over a tenth of a drink a day.<sup><a href="#n1">1</a></sup> Its harm at this age is mostly immediate: injuries, crashes, assault, poisoning. The brain keeps developing into the mid-twenties, so this is also when the mental-health risks of cannabis peak, with the highest rates of psychosis, dependence, and hyperemesis.<sup><a href="#n3">3</a>,<a href="#n10">10</a></sup></p>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol is more likely to injure or kill you this year. Daily high-potency cannabis is about as harmful as regular binge drinking, through the mind rather than the body.</p>
+
+    <h3>Forty to sixty-four</h3>
+    <p>Chronic disease begins to dominate, which favors cannabis. Drinking's cancer risk accumulates over decades, and liver disease, high blood pressure, and atrial fibrillation appear.<sup><a href="#n9">9</a></sup> For cannabis, the heart attack and stroke findings matter most here; the population in that study averaged forty-five years old.<sup><a href="#n2">2</a></sup></p>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol, clearly. Daily cannabis smoking remains a real risk for anyone with heart disease or high blood pressure.</p>
+
+    <h3>Sixty-five and older</h3>
+    <p>Both grow riskier as metabolism slows and lists of medications lengthen. The same drink produces a higher blood alcohol level in an older body, and falls, fractures, and interactions with blood thinners and sedatives follow. Cannabis-related emergency visits among Californians over 65 rose 1,808 percent from 2005 to 2019,<sup><a href="#n12">12</a></sup> commonly for confusion, paranoia, fainting, and falls.<sup><a href="#n13">13</a></sup> People who needed emergency care for cannabis were also more likely to develop dementia, though that finding is observational.<sup><a href="#n14">14</a></sup> Many return to cannabis after decades away and underestimate how much stronger it has become.<sup><a href="#n15">15</a></sup></p>
+    <p class="verdict"><span class="caps">Verdict</span>Alcohol does more lasting damage. Cannabis is a surprisingly common cause of falls and emergency visits, especially as edibles and alongside other medications.</p>
+  </section>
+
+  <section>
+    <p class="caps">VI</p>
+    <h2>At a glance</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Effect</th><th>Alcohol</th><th>Cannabis</th><th>Worse</th></tr></thead>
+        <tbody>
+          <tr><td>Fatal overdose</td><td>Possible</td><td>Essentially none</td><td class="w">Alcohol</td></tr>
+          <tr><td>Psychosis</td><td>Low risk</td><td>Real risk with heavy, high-potency use</td><td class="w">Cannabis</td></tr>
+          <tr><td>Brain and dementia</td><td>Clear, dose-dependent harm</td><td>Signals, less established</td><td class="w">Alcohol</td></tr>
+          <tr><td>Heart and stroke</td><td>Arrhythmia, blood pressure, heart muscle</td><td>Higher odds with daily use</td><td class="w">Even</td></tr>
+          <tr><td>Cancer</td><td>Seven or more cancers</td><td>Weak or unclear link</td><td class="w">Alcohol</td></tr>
+          <tr><td>Liver and pancreas</td><td>Major damage</td><td>Minimal</td><td class="w">Alcohol</td></tr>
+          <tr><td>Withdrawal</td><td>Can be fatal</td><td>Not dangerous</td><td class="w">Alcohol</td></tr>
+          <tr><td>Ages 18 to 25</td><td>Injury, no benefit</td><td>Peak mental-health risk</td><td class="w">Close</td></tr>
+          <tr><td>Ages 40 to 64</td><td>Cancer, liver, heart</td><td>Heart risk with daily use</td><td class="w">Alcohol</td></tr>
+          <tr><td>Ages 65 and over</td><td>Falls, interactions, organ damage</td><td>Falls, confusion, interactions</td><td class="w">Alcohol</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="caps">VII</p>
+    <h2>Conclusion</h2>
+    <p>On health alone, alcohol is the more harmful drug for most people across most of life. It damages nearly every organ, it causes cancer, and its supposed benefits have largely dissolved, particularly before forty.</p>
+    <p>The risks of cannabis are narrower but real: psychosis, dependence, heart effects with daily use, and acute problems such as hyperemesis. They fall hardest at either end of adult life. For a young man using high-potency cannabis every day, the idea that it is the safe choice does not hold.</p>
+    <p>For either one, how often matters more than which.</p>
+  </section>
+
+  <p class="break" aria-hidden="true">&middot;&middot;&middot;</p>
+
+  <section id="notes">
+    <p class="caps">Notes</p>
+    <ol class="notes">
+      <li id="n1">GBD 2020 Alcohol Collaborators (Bryazka D, et al.). Population-level risks of alcohol consumption by amount, geography, age, sex, and year. <span class="j">The Lancet</span>, 2022; 400: 185–235. <span class="links"><a href="https://iro.uiowa.edu/esploro/outputs/journalArticle/Population-level-risks-of-alcohol-consumption-by/9984949186302771" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n2">Jeffers AM, Glantz S, Byers AL, Keyhani S. Association of cannabis use with cardiovascular outcomes among US adults. <span class="j">Journal of the American Heart Association</span>, 2024; 13(5): e030178. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/38415581/" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n3">Hjorthøj C, Compton W, Starzer M, et al. Association between cannabis use disorder and schizophrenia stronger in young males than in females. <span class="j">Psychological Medicine</span>, 2023. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Hjorth%C3%B8j+cannabis+use+disorder+schizophrenia+young+males+females" target="_blank" rel="noopener">Paper</a><a href="https://www.scientificamerican.com/article/heavy-cannabis-use-linked-to-schizophrenia-especially-among-young-men/" target="_blank" rel="noopener">Summary</a></span></li>
+      <li id="n4">Di Forti M, et al. The contribution of cannabis use to variation in the incidence of psychotic disorder across Europe. <span class="j">The Lancet Psychiatry</span>, 2019; 6(5): 427–436. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Di+Forti+contribution+of+cannabis+use+psychotic+disorder+Europe" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n5">Meier MH, et al. Persistent cannabis users show neuropsychological decline from childhood to midlife. <span class="j">PNAS</span>, 2012; 109(40): E2657–E2664. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Meier+persistent+cannabis+users+neuropsychological+decline+childhood+midlife" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n6">Daviet R, et al. Associations between alcohol consumption and gray and white matter volumes in the UK Biobank. <span class="j">Nature Communications</span>, 2022; 13: 1175. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Daviet+alcohol+consumption+gray+white+matter+UK+Biobank" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n7">Schwarzinger M, et al. Contribution of alcohol use disorders to the burden of dementia in France. <span class="j">The Lancet Public Health</span>, 2018; 3(3): e124–e132. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Schwarzinger+alcohol+use+disorders+dementia+France" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n8">Zhao J, et al. Association between daily alcohol intake and risk of all-cause mortality: a systematic review and meta-analyses. <span class="j">JAMA Network Open</span>, 2023; 6(3): e236185. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Zhao+daily+alcohol+intake+all-cause+mortality+meta-analyses+2023" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n9">Office of the US Surgeon General. <span class="j">Alcohol and Cancer Risk: The U.S. Surgeon General's Advisory</span>. Department of Health and Human Services, January 2025. <span class="links"><a href="https://www.hhs.gov/sites/default/files/oash-alcohol-cancer-risk.pdf" target="_blank" rel="noopener">Report</a></span></li>
+      <li id="n10">Vivolo-Kantor AM, Liu S, Tanz LJ, Mattson CL, Schier J. Cannabis hyperemesis syndrome identified using a new diagnosis code, United States, January 2023 to May 2026. <span class="j">Morbidity and Mortality Weekly Report</span>, 2026; 75(30). <span class="links"><a href="https://www.cdc.gov/mmwr/volumes/75/wr/pdfs/mm7530a2-H.pdf" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n11">Miki A, et al. Cannabinoid hyperemesis syndrome in Massachusetts emergency departments, 2012 to 2021. <span class="j">American Journal of Gastroenterology</span>, December 2025. <span class="links"><a href="https://www.healthday.com/healthpro-news/digestive-system/2012-to-2021-saw-increase-in-cannabinoid-hyperemesis-syndrome" target="_blank" rel="noopener">Summary</a></span></li>
+      <li id="n12">University of California San Diego. Cannabis-related emergency visits among older adults in California, 2005 to 2019. <span class="j">Journal of the American Geriatrics Society</span>, 2023. <span class="links"><a href="https://www.eurekalert.org/news-releases/976064" target="_blank" rel="noopener">Summary</a></span></li>
+      <li id="n13">Gurwitz JH, et al. Emergency visits for adverse events from cannabinoid products among US adults aged 50 and older, 2016 to 2023. <span class="j">Journal of General Internal Medicine</span>, 2025. <span class="links"><a href="https://www.umassmed.edu/news/articles/archives/2025/12/science-for-living-examining-hidden-risks-of-cannabis-use-among-older-adults/" target="_blank" rel="noopener">Summary</a></span></li>
+      <li id="n14">Myran DT, Pugliese M, Harrison LD, Stall NM, Webber C. Risk of dementia in individuals with emergency department visits or hospitalizations due to cannabis. <span class="j">JAMA Neurology</span>, 2025; 82(6): 570–579. <span class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Myran+risk+of+dementia+emergency+department+visits+hospitalizations+cannabis" target="_blank" rel="noopener">Paper</a></span></li>
+      <li id="n15">Stall NM, et al. Cannabis poisoning emergency visits among adults 65 and older in Ontario, 2015 to 2022. As reported by CBC Radio, 2024. <span class="links"><a href="https://amp.cbc.ca/radio/thecurrent/cannabis-seniors-emergency-room-1.7221192" target="_blank" rel="noopener">Summary</a></span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>A summary of published research, for general information. It is not medical advice.</p>
+    <p>If you are worried about your own use of alcohol or cannabis, a doctor can help. The SAMHSA National Helpline is free and confidential: 1-800-662-4357.</p>
+  </footer>
+
+</article>
+</body>
+</html>
